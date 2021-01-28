@@ -1,2 +1,2 @@
 # exam-407
-snippet for exam 407
+Automating with ansible, snippet for exam-407
