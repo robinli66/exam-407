@@ -1,0 +1,12 @@
+---
+- name: create a windows user
+  hosts: win
+
+  tasks:
+    - name: create windows user
+      win_user:
+        name: linda
+        password: Ansible123
+        state: present
+        groups:
+          - Users
