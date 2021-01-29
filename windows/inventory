@@ -18,6 +18,6 @@ windows.ecm.com
 ansible_user=ansible
 ansible_passwd=@ansible123
 ansible_connection=winrm
-ansible_winrum_server_cert_validation=ignore
+ansible_winrm_server_cert_validation=ignore
 
 
