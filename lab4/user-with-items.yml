@@ -1,0 +1,21 @@
+---
+- name: create users
+  hosts: ansible107.ecm.com
+
+  tasks:
+  - name: create groups - testgroup1, testgroup2
+    group:
+      name: "{{ item }}"
+      state: present
+    loop:
+     - testgroup1
+     - testgroup2
+
+  - name: manage users and membership
+    user:
+      name: "{{ item.name }}"
+      state: present
+      groups: "{{ item.groups }}"
+    with_items:
+      - { name: 'linda', groups: 'testgroup1' }
+      - { name: 'anna', groups: 'testgroup2'  }
