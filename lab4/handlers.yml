@@ -1,0 +1,29 @@
+---
+- name: copy new index.html
+  hosts: file
+
+  tasks:
+    - name: install httpd
+      package: 
+        name: httpd
+        state: present
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+
+    - name: create an index.html
+      copy:
+        content: "Welcome to this webserver"
+        dest: /var/www/html/index.html
+      notify:
+        - restart_web
+
+  handlers:
+    - name: restart_web
+      service:
+        name: httpd
+        state: restarted
+
+    
