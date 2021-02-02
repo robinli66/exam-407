@@ -1,0 +1,46 @@
+---
+
+# note: this solution is incomplete but gives a good impression of where to go
+
+- name: deply and start Apache
+  hosts: nodes
+  
+  vars_files:
+    - "./vars/{{ ansible_os_family }}.yml"
+
+  tasks:
+    - name: install and update the latest packages
+      package:
+        name:
+          - "{{ web_package }}"
+          - "{{ firewall_package }}"
+          - "{{ ftp_package }}"
+          - "{{ db_package }}"
+        state: latest
+      notify:
+        - success
+
+    - name: start and enable {{ firewall_service }}
+      service:
+        name: "{{ firewall_service }}"
+        enabled: true
+        state: started
+
+    - name: start and enable {{ web_service }}
+      service:
+        name: "{{ web_service }}"
+        enabled: true
+        state: started
+
+    - include_tasks: tasks/ubuntu.yml
+      when: ansible_os_family == 'Ubuntu'
+
+    - include_tasks: tasks/redhat.yml
+      when: ansible_os_family == 'RedHat'
+
+  handlers:
+    - name: success
+      debug:
+        msg: package installation on {{ inventory_hostname }} successful
+
+    
