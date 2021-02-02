@@ -1,0 +1,24 @@
+---
+- hosts: nodes
+  
+  tasks:
+  - name: install vsftpd
+    package:
+      name: vsftpd
+      state: present
+
+  - name: start vsftpd service
+    service:
+      name: vsftpd
+      state: started
+
+  - name: vsftpd status
+    command: /usr/bin/systemctl is-active vsftpd
+    ignore_errors: yes
+    register: result
+
+  - name: create file in FTP doc root
+    copy:
+      src: /etc/hosts
+      dest: /var/ftp/pub
+    when: result.rc == 0
