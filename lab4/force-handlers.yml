@@ -1,0 +1,32 @@
+---
+
+- name: set up webserver
+  hosts: nodes
+  force_handlers: True
+
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: latest
+
+    - name: initialize the index.html
+      copy:
+        content: "Welcome to the webserver"
+        dest: /var/www/html/index.html
+      notify:
+        - restart_web
+
+    - name: copy nothing - intended to fail
+      copy:
+        src: /tmp/nothing
+        dest: /var/www/html/nothing.html
+
+  handlers:
+    - name: restart_web
+      service:
+        name: httpd
+        state: restarted
+
+...
+        
