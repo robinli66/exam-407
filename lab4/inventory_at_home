@@ -9,4 +9,8 @@ ansible101.ecm.com
 [file]
 ansible102.ecm.com
 
+[webservers]
+ansible101.ecm.com
+ansible102.ecm.com
+ansible103.ecm.com
 
