@@ -1,0 +1,7 @@
+---
+
+- name: use role from geerlingguy to setup docker
+  hosts: file
+
+  roles:
+    - geerlingguy.docker
