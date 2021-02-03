@@ -1,0 +1,8 @@
+---
+
+- name: use motd role
+  hosts: file
+
+  roles:
+    - role: motd
+      system_manager: robinli@ecm.com

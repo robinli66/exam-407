@@ -4,31 +4,32 @@
 
 - name: deply and start Apache
   hosts: nodes
-  
-  vars_files:
-    - "./vars/{{ ansible_os_family }}.yml"
 
+  
   tasks:
+    - name: Include the OS-specific variables.
+      include_vars: "./vars/{{ ansible_os_family }}.yml"
+
     - name: install and update the latest packages
       package:
         name:
-          - "{{ web_package }}"
-          - "{{ firewall_package }}"
-          - "{{ ftp_package }}"
-          - "{{ db_package }}"
+          - "{{ packages.web_package }}"
+          - "{{ packages.firewall_package }}"
+          - "{{ packages.ftp_package }}"
+          - "{{ packages.db_package }}"
         state: latest
       notify:
         - success
 
-    - name: start and enable {{ firewall_service }}
+    - name: start and enable {{ services.firewall_service }}
       service:
-        name: "{{ firewall_service }}"
+        name: "{{ services.firewall_service }}"
         enabled: true
         state: started
 
-    - name: start and enable {{ web_service }}
+    - name: start and enable {{ services.web_service }}
       service:
-        name: "{{ web_service }}"
+        name: "{{ packages.web_package }}"
         enabled: true
         state: started
 

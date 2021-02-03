@@ -8,6 +8,6 @@
     state: enabled
 
   with_items:
-    - httpd
-    - vsftpd
-    - mariadb
+    - http
+    - ftp
+    - mysql
