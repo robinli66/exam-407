@@ -27,3 +27,4 @@ alias asp=ansible-playbook
 alias asd=ansible-doc
 alias asl=ansible-lint
 alias asg=ansible-galaxy
+alias asv=ansible-vault

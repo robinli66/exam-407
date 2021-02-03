@@ -1,0 +1,22 @@
+---
+
+- name: remove the group & user created in createuser.yml
+  hosts: file
+
+  tasks:
+    - name: remove user
+      user:
+        name: "{{ item }}"
+        state: absent
+      loop:
+        - user1
+        - user2
+
+    - name: remove group
+      group:
+        name: "{{ item }}"
+        state: absent
+      loop:
+       - user1
+       - user2
+
