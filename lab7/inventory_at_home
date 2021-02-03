@@ -1,0 +1,12 @@
+ansible[100:102].ecm.com
+
+[nodes]
+ansible[101:102].ecm.com
+
+[lamp]
+ansible101.ecm.com
+
+[file]
+ansible102.ecm.com
+
+
