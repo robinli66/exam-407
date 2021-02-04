@@ -1,0 +1,5 @@
+#{{ ansible_managed }}
+
+ProxyPass "/external" "http://{{ ansible_default_ipv4.address }}"
+ProxyPassReverse "/external" "http://{{ ansible_default_ipv4.address }}"
+

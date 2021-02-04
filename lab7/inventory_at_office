@@ -1,5 +1,6 @@
 ansible[106:107].ecm.com
 ansible100.ecm.com
+proxy.ecm.com
 
 [nodes]
 ansible[106:107].ecm.com
@@ -10,4 +11,9 @@ ansible106.ecm.com
 [file]
 ansible107.ecm.com
 
+[proxyservers]
+proxy.ecm.com
+
+[webservers]
+ansible107.ecm.com
 

@@ -1,0 +1,11 @@
+---
+
+- name: testing the async feature
+  hosts: nodes
+
+  tasks:
+    - name: set waiting limit
+      command: /bin/sleep 15
+#      command: /bin/sleep 5
+      async: 16
+      poll: 5
