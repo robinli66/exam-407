@@ -1,0 +1,28 @@
+---
+
+- name: copy new index.html
+  hosts: file
+  force_handlers: true
+
+  tasks:
+    - name: install httpd
+      yum: name=httpd
+
+    - name: copy index.html
+      copy:
+        content: "Welcome to ansible107 server"
+        dest: /var/www/html/index.html
+      notify:
+        - restart_web
+
+    - name: copy nothing
+      copy:
+        src: /tmp/nothing
+        dest: nowhere
+
+  handlers:
+    - name: restart_web
+      service:
+        name: httpd
+        state: restarted
+
