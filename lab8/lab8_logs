@@ -327,3 +327,75 @@ If you are using a module and expect the file to exist on the remote, see the re
 2021-02-04 12:20:00,050 p=7924 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2021-02-04 12:34:03,589 p=8046 u=ansible n=ansible | playbook: uricheck.yml
 2021-02-04 12:34:09,694 p=8055 u=ansible n=ansiblelint.__main__ | Listing 1 violation(s) that are fatal
+2021-02-04 07:22:24,209 p=18734 u=ansible n=ansible | playbook: uricheck.yml
+2021-02-04 07:22:31,596 p=18741 u=ansible n=ansiblelint.__main__ | Listing 1 violation(s) that are fatal
+2021-02-04 07:22:46,813 p=18748 u=ansible n=ansible | PLAY [check URL] **********************************************************************************************************************
+2021-02-04 07:22:46,820 p=18748 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:22:55,405 p=18748 u=ansible n=ansible | fatal: [ansible107.ecm.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ansible107.ecm.com: Name or service not known", "unreachable": true}
+2021-02-04 07:22:55,406 p=18748 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:22:55,406 p=18748 u=ansible n=ansible | ansible107.ecm.com         : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 07:23:19,977 p=18773 u=ansible n=ansible | PLAY [check URL] **********************************************************************************************************************
+2021-02-04 07:23:19,983 p=18773 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:23:20,972 p=18773 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:23:20,984 p=18773 u=ansible n=ansible | TASK [uri] ****************************************************************************************************************************
+2021-02-04 07:23:38,071 p=18773 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:23:38,078 p=18773 u=ansible n=ansible | TASK [Fail if sander is not in the page content] **************************************************************************************
+2021-02-04 07:23:38,102 p=18773 u=ansible n=ansible | skipping: [ansible102.ecm.com]
+2021-02-04 07:23:38,114 p=18773 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:23:38,114 p=18773 u=ansible n=ansible | ansible102.ecm.com         : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-02-04 07:24:21,431 p=18820 u=ansible n=ansible | PLAY [check URL] **********************************************************************************************************************
+2021-02-04 07:24:21,437 p=18820 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:24:22,137 p=18820 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:24:22,149 p=18820 u=ansible n=ansible | TASK [uri] ****************************************************************************************************************************
+2021-02-04 07:24:26,693 p=18820 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:24:26,700 p=18820 u=ansible n=ansible | TASK [Fail if sander is not in the page content] **************************************************************************************
+2021-02-04 07:24:26,725 p=18820 u=ansible n=ansible | fatal: [ansible102.ecm.com]: FAILED! => {"changed": false, "msg": "not the right content"}
+2021-02-04 07:24:26,726 p=18820 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:24:26,726 p=18820 u=ansible n=ansible | ansible102.ecm.com         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-04 07:25:39,207 p=18866 u=ansible n=ansible | PLAY [check URL] **********************************************************************************************************************
+2021-02-04 07:25:39,213 p=18866 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:25:41,176 p=18866 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:25:41,188 p=18866 u=ansible n=ansible | TASK [uri] ****************************************************************************************************************************
+2021-02-04 07:25:45,757 p=18866 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:25:45,764 p=18866 u=ansible n=ansible | TASK [Fail if sander is not in the page content] **************************************************************************************
+2021-02-04 07:25:45,788 p=18866 u=ansible n=ansible | skipping: [ansible102.ecm.com]
+2021-02-04 07:25:45,800 p=18866 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:25:45,800 p=18866 u=ansible n=ansible | ansible102.ecm.com         : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-02-04 07:26:22,612 p=18931 u=ansible n=ansible | ERROR! conflicting action statements: assert, that
+
+The error appears to be in '/home/ansible/exam-407/lab8/assert.yml': line 11, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - assert:
+      ^ here
+
+2021-02-04 07:27:03,494 p=18949 u=ansible n=ansible | playbook: assert.yml
+2021-02-04 07:27:31,674 p=18958 u=ansible n=ansible | PLAY [test for file existence] ********************************************************************************************************
+2021-02-04 07:27:31,680 p=18958 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:27:32,635 p=18958 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:27:32,647 p=18958 u=ansible n=ansible | TASK [stat] ***************************************************************************************************************************
+2021-02-04 07:27:32,936 p=18958 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:27:32,943 p=18958 u=ansible n=ansible | TASK [assert] *************************************************************************************************************************
+2021-02-04 07:27:32,972 p=18958 u=ansible n=ansible | ok: [ansible102.ecm.com] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2021-02-04 07:27:32,984 p=18958 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:27:32,984 p=18958 u=ansible n=ansible | ansible102.ecm.com         : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 07:27:53,029 p=19005 u=ansible n=ansible | PLAY [test for file existence] ********************************************************************************************************
+2021-02-04 07:27:53,035 p=19005 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:27:53,729 p=19005 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:27:53,741 p=19005 u=ansible n=ansible | TASK [stat] ***************************************************************************************************************************
+2021-02-04 07:27:54,016 p=19005 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:27:54,022 p=19005 u=ansible n=ansible | TASK [assert] *************************************************************************************************************************
+2021-02-04 07:27:54,048 p=19005 u=ansible n=ansible | fatal: [ansible102.ecm.com]: FAILED! => {
+    "assertion": "hosts.stat.exists",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Assertion failed"
+}
+2021-02-04 07:27:54,049 p=19005 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:27:54,049 p=19005 u=ansible n=ansible | ansible102.ecm.com         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

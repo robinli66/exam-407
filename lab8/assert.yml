@@ -5,9 +5,9 @@
 
   tasks:
     - stat:
-        path: /etc/hosts
+        path: /etc/osts
       register: hosts
 
     - assert:
-      that:
-        - hosts.stat.exists
+        that:
+          - hosts.stat.exists

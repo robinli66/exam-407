@@ -1,0 +1,92 @@
+2021-02-04 07:59:20,727 p=19321 u=ansible n=ansible | [DEPRECATION WARNING]: The firewalld module has been moved to the ansible.posix collection. This feature will be removed from 
+community.general in version 2.0.0. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-02-04 07:59:20,756 p=19321 u=ansible n=ansible | PLAY [all] ****************************************************************************************************************************
+2021-02-04 07:59:20,762 p=19321 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:59:21,808 p=19321 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 07:59:21,825 p=19321 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:59:21,900 p=19321 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 07:59:21,912 p=19321 u=ansible n=ansible | TASK [install the firewall] ***********************************************************************************************************
+2021-02-04 07:59:28,705 p=19321 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 07:59:29,106 p=19321 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 07:59:44,717 p=19321 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 07:59:44,723 p=19321 u=ansible n=ansible | TASK [start the firewall] *************************************************************************************************************
+2021-02-04 07:59:45,334 p=19321 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 07:59:45,365 p=19321 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 07:59:45,366 p=19321 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 07:59:45,379 p=19321 u=ansible n=ansible | PLAY [lamp] ***************************************************************************************************************************
+2021-02-04 07:59:45,386 p=19321 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 07:59:45,833 p=19321 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 07:59:45,854 p=19321 u=ansible n=ansible | TASK [include the variable file] ******************************************************************************************************
+2021-02-04 07:59:45,865 p=19321 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 07:59:45,871 p=19321 u=ansible n=ansible | TASK [install and start the servers] **************************************************************************************************
+2021-02-04 07:59:45,896 p=19321 u=ansible n=ansible | fatal: [ansible101.ecm.com]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'custom'\n\nThe error appears to be in '/home/ansible/exam-407/lab8/lab/lab-tasks/lamp.yml': line 2, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n---\n  - name: install and start the servers\n    ^ here\n"}
+2021-02-04 07:59:45,896 p=19321 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 07:59:45,896 p=19321 u=ansible n=ansible | ansible100.ecm.com         : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 07:59:45,896 p=19321 u=ansible n=ansible | ansible101.ecm.com         : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-04 07:59:45,896 p=19321 u=ansible n=ansible | ansible102.ecm.com         : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:01:28,609 p=19917 u=ansible n=ansible | PLAY [Install remote facts] ***********************************************************************************************************
+2021-02-04 08:01:28,615 p=19917 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 08:01:29,698 p=19917 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:01:29,702 p=19917 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:01:29,758 p=19917 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 08:01:29,769 p=19917 u=ansible n=ansible | TASK [create remote directory] ********************************************************************************************************
+2021-02-04 08:01:30,144 p=19917 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:01:30,153 p=19917 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:01:30,205 p=19917 u=ansible n=ansible | changed: [ansible100.ecm.com]
+2021-02-04 08:01:30,212 p=19917 u=ansible n=ansible | TASK [install new facts] **************************************************************************************************************
+2021-02-04 08:01:31,024 p=19917 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:01:31,032 p=19917 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:01:31,095 p=19917 u=ansible n=ansible | changed: [ansible100.ecm.com]
+2021-02-04 08:01:31,107 p=19917 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 08:01:31,107 p=19917 u=ansible n=ansible | ansible100.ecm.com         : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:01:31,107 p=19917 u=ansible n=ansible | ansible101.ecm.com         : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:01:31,107 p=19917 u=ansible n=ansible | ansible102.ecm.com         : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:02:13,144 p=20637 u=ansible n=ansible | [DEPRECATION WARNING]: The firewalld module has been moved to the ansible.posix collection. This feature will be removed from 
+community.general in version 2.0.0. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-02-04 08:02:13,172 p=20637 u=ansible n=ansible | PLAY [all] ****************************************************************************************************************************
+2021-02-04 08:02:13,178 p=20637 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 08:02:13,952 p=20637 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:02:13,962 p=20637 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:02:14,029 p=20637 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 08:02:14,041 p=20637 u=ansible n=ansible | TASK [install the firewall] ***********************************************************************************************************
+2021-02-04 08:02:14,937 p=20637 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:02:14,942 p=20637 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:02:15,777 p=20637 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 08:02:15,783 p=20637 u=ansible n=ansible | TASK [start the firewall] *************************************************************************************************************
+2021-02-04 08:02:16,339 p=20637 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:02:16,348 p=20637 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:02:16,394 p=20637 u=ansible n=ansible | ok: [ansible100.ecm.com]
+2021-02-04 08:02:16,407 p=20637 u=ansible n=ansible | PLAY [lamp] ***************************************************************************************************************************
+2021-02-04 08:02:16,414 p=20637 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 08:02:16,857 p=20637 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:02:16,869 p=20637 u=ansible n=ansible | TASK [include the variable file] ******************************************************************************************************
+2021-02-04 08:02:16,879 p=20637 u=ansible n=ansible | ok: [ansible101.ecm.com]
+2021-02-04 08:02:16,886 p=20637 u=ansible n=ansible | TASK [install and start the servers] **************************************************************************************************
+2021-02-04 08:02:19,595 p=20637 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:02:19,601 p=20637 u=ansible n=ansible | TASK [start database server] **********************************************************************************************************
+2021-02-04 08:02:19,930 p=20637 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:02:19,936 p=20637 u=ansible n=ansible | TASK [start the web service] **********************************************************************************************************
+2021-02-04 08:02:20,280 p=20637 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:02:20,287 p=20637 u=ansible n=ansible | TASK [open the port for the web server] ***********************************************************************************************
+2021-02-04 08:02:20,779 p=20637 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:02:20,785 p=20637 u=ansible n=ansible | TASK [create index.html] **************************************************************************************************************
+2021-02-04 08:02:21,362 p=20637 u=ansible n=ansible | changed: [ansible101.ecm.com]
+2021-02-04 08:02:21,375 p=20637 u=ansible n=ansible | PLAY [file] ***************************************************************************************************************************
+2021-02-04 08:02:21,381 p=20637 u=ansible n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2021-02-04 08:02:21,822 p=20637 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:02:21,833 p=20637 u=ansible n=ansible | TASK [include the variabe file] *******************************************************************************************************
+2021-02-04 08:02:21,843 p=20637 u=ansible n=ansible | ok: [ansible102.ecm.com]
+2021-02-04 08:02:21,850 p=20637 u=ansible n=ansible | TASK [install and start file services] ************************************************************************************************
+2021-02-04 08:02:26,072 p=20637 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:02:26,078 p=20637 u=ansible n=ansible | TASK [start samba server] *************************************************************************************************************
+2021-02-04 08:02:26,462 p=20637 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:02:26,468 p=20637 u=ansible n=ansible | TASK [start the ftp service] **********************************************************************************************************
+2021-02-04 08:02:26,791 p=20637 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:02:26,798 p=20637 u=ansible n=ansible | TASK [open the port for the ftp service] **********************************************************************************************
+2021-02-04 08:02:27,176 p=20637 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:02:27,182 p=20637 u=ansible n=ansible | TASK [open the port for the smb service] **********************************************************************************************
+2021-02-04 08:02:27,561 p=20637 u=ansible n=ansible | changed: [ansible102.ecm.com]
+2021-02-04 08:02:27,573 p=20637 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
+2021-02-04 08:02:27,573 p=20637 u=ansible n=ansible | ansible100.ecm.com         : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:02:27,573 p=20637 u=ansible n=ansible | ansible101.ecm.com         : ok=10   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-02-04 08:02:27,573 p=20637 u=ansible n=ansible | ansible102.ecm.com         : ok=10   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
