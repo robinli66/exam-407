@@ -399,3 +399,190 @@ The offending line appears to be:
 }
 2021-02-04 07:27:54,049 p=19005 u=ansible n=ansible | PLAY RECAP ****************************************************************************************************************************
 2021-02-04 07:27:54,049 p=19005 u=ansible n=ansible | ansible102.ecm.com         : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:14:59,411 p=4636 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:14:59,418 p=4636 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:15:00,609 p=4636 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:15:00,617 p=4636 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:15:01,844 p=4636 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:15:01,852 p=4636 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:15:02,582 p=4636 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:15:02,588 p=4636 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:15:02,670 p=4636 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2021-02-07 11:15:02,671 p=4636 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/nothing' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2021-02-07 11:15:02,672 p=4636 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:15:02,672 p=4636 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:15:31,409 p=4691 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:15:31,416 p=4691 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:15:32,378 p=4691 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:15:32,386 p=4691 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:15:32,776 p=4691 u=ansible n=ansible |  [ERROR]: User interrupted execution
+
+2021-02-07 11:16:41,669 p=4722 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:16:41,676 p=4722 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:16:42,789 p=4722 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:16:42,797 p=4722 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:16:43,858 p=4722 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:16:43,865 p=4722 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:16:44,589 p=4722 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:16:44,595 p=4722 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:16:44,674 p=4722 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2021-02-07 11:16:44,675 p=4722 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/nothing' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2021-02-07 11:16:44,676 p=4722 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:16:44,676 p=4722 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:21:10,831 p=4801 u=ansible n=ansible | playbook: handlers.yml
+2021-02-07 11:21:17,226 p=4809 u=ansible n=ansiblelint.__main__ | Listing 2 violation(s) that are fatal
+2021-02-07 11:21:22,557 p=4825 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:21:22,564 p=4825 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:21:23,701 p=4825 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:21:23,709 p=4825 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:21:24,793 p=4825 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:21:24,801 p=4825 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:21:25,529 p=4825 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:21:25,536 p=4825 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:21:25,617 p=4825 u=ansible n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2021-02-07 11:21:25,618 p=4825 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/nothing' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2021-02-07 11:21:25,619 p=4825 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:21:25,619 p=4825 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:22:35,999 p=4898 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:22:36,006 p=4898 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:22:37,101 p=4898 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:22:37,109 p=4898 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:22:38,157 p=4898 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:22:38,164 p=4898 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:22:38,894 p=4898 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:22:38,900 p=4898 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:22:39,325 p=4898 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:22:39,326 p=4898 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:22:39,326 p=4898 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:24:38,043 p=4972 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:24:38,051 p=4972 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:24:39,151 p=4972 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:24:39,159 p=4972 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:24:40,212 p=4972 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:24:40,219 p=4972 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:24:40,941 p=4972 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:24:40,947 p=4972 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:24:41,369 p=4972 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:24:41,370 p=4972 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:24:41,370 p=4972 u=ansible n=ansible | ansible107.ecm.com         : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-02-07 11:28:48,022 p=5045 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:28:48,029 p=5045 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:28:49,155 p=5045 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:28:49,163 p=5045 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:28:50,238 p=5045 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:28:50,244 p=5045 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:28:50,979 p=5045 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:28:50,985 p=5045 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:28:51,412 p=5045 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:28:51,413 p=5045 u=ansible n=ansible | ...ignoring
+2021-02-07 11:28:51,414 p=5045 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:28:51,414 p=5045 u=ansible n=ansible | ansible107.ecm.com         : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2021-02-07 11:33:40,535 p=5134 u=ansible n=ansible | ansible-playbook 2.9.17
+  config file = /home/ansible/exam-407/lab8/ansible.cfg
+  configured module search path = ['/home/ansible/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.6.8 (default, Aug 24 2020, 17:57:11) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
+2021-02-07 11:33:40,535 p=5134 u=ansible n=ansible | Using /home/ansible/exam-407/lab8/ansible.cfg as config file
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-07 11:33:40,725 p=5134 u=ansible n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | PLAYBOOK: handlers.yml ***********************************************************************************************
+2021-02-07 11:33:40,726 p=5134 u=ansible n=ansible | 1 plays in handlers.yml
+2021-02-07 11:33:40,728 p=5134 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:33:40,735 p=5134 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:33:41,907 p=5134 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:33:41,909 p=5134 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:33:41,915 p=5134 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:33:42,985 p=5134 u=ansible n=ansible | ok: [ansible107.ecm.com] => {"changed": false, "msg": "Nothing to do", "rc": 0, "results": []}
+2021-02-07 11:33:42,992 p=5134 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:33:43,720 p=5134 u=ansible n=ansible | ok: [ansible107.ecm.com] => {"changed": false, "checksum": "c415b6254b57ace087404d63fe49f43d7594d773", "dest": "/var/www/html/index.html", "gid": 48, "group": "apache", "mode": "0644", "owner": "apache", "path": "/var/www/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 28, "state": "file", "uid": 48}
+2021-02-07 11:33:43,726 p=5134 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:33:44,156 p=5134 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:33:44,156 p=5134 u=ansible n=ansible | ...ignoring
+2021-02-07 11:33:44,156 p=5134 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:33:44,157 p=5134 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:33:44,158 p=5134 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:33:44,158 p=5134 u=ansible n=ansible | ansible107.ecm.com         : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2021-02-07 11:34:20,059 p=5198 u=ansible n=ansible | ansible-playbook 2.9.17
+  config file = /home/ansible/exam-407/lab8/ansible.cfg
+  configured module search path = ['/home/ansible/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.6.8 (default, Aug 24 2020, 17:57:11) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
+2021-02-07 11:34:20,059 p=5198 u=ansible n=ansible | Using /home/ansible/exam-407/lab8/ansible.cfg as config file
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2021-02-07 11:34:20,243 p=5198 u=ansible n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | PLAYBOOK: handlers.yml ***********************************************************************************************
+2021-02-07 11:34:20,244 p=5198 u=ansible n=ansible | 1 plays in handlers.yml
+2021-02-07 11:34:20,246 p=5198 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:34:20,253 p=5198 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:34:21,215 p=5198 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:34:21,217 p=5198 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:34:21,223 p=5198 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:34:22,269 p=5198 u=ansible n=ansible | ok: [ansible107.ecm.com] => {"changed": false, "msg": "Nothing to do", "rc": 0, "results": []}
+2021-02-07 11:34:22,276 p=5198 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:34:23,003 p=5198 u=ansible n=ansible | ok: [ansible107.ecm.com] => {"changed": false, "checksum": "c415b6254b57ace087404d63fe49f43d7594d773", "dest": "/var/www/html/index.html", "gid": 48, "group": "apache", "mode": "0644", "owner": "apache", "path": "/var/www/html/index.html", "secontext": "system_u:object_r:httpd_sys_content_t:s0", "size": 28, "state": "file", "uid": 48}
+2021-02-07 11:34:23,009 p=5198 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:34:23,437 p=5198 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:34:23,437 p=5198 u=ansible n=ansible | ...ignoring
+2021-02-07 11:34:23,437 p=5198 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:34:23,438 p=5198 u=ansible n=ansible | META: ran handlers
+2021-02-07 11:34:23,438 p=5198 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:34:23,438 p=5198 u=ansible n=ansible | ansible107.ecm.com         : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2021-02-07 11:54:32,432 p=5512 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:54:32,439 p=5512 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:54:33,554 p=5512 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:54:33,562 p=5512 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:54:34,623 p=5512 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:54:34,630 p=5512 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:54:35,394 p=5512 u=ansible n=ansible | changed: [ansible107.ecm.com]
+2021-02-07 11:54:35,401 p=5512 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:54:35,696 p=5512 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:54:35,696 p=5512 u=ansible n=ansible | ...ignoring
+2021-02-07 11:54:35,696 p=5512 u=ansible n=ansible | RUNNING HANDLER [restart_web] ****************************************************************************************
+2021-02-07 11:54:36,336 p=5512 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Could not find the requested service httpdx: host"}
+2021-02-07 11:54:36,336 p=5512 u=ansible n=ansible | ...ignoring
+2021-02-07 11:54:36,337 p=5512 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:54:36,337 p=5512 u=ansible n=ansible | ansible107.ecm.com         : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+2021-02-07 11:55:25,390 p=5592 u=ansible n=ansible | PLAY [copy new index.html] *******************************************************************************************
+2021-02-07 11:55:25,397 p=5592 u=ansible n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2021-02-07 11:55:26,347 p=5592 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:55:26,355 p=5592 u=ansible n=ansible | TASK [install httpd] *************************************************************************************************
+2021-02-07 11:55:27,398 p=5592 u=ansible n=ansible | ok: [ansible107.ecm.com]
+2021-02-07 11:55:27,405 p=5592 u=ansible n=ansible | TASK [copy index.html] ***********************************************************************************************
+2021-02-07 11:55:28,169 p=5592 u=ansible n=ansible | changed: [ansible107.ecm.com]
+2021-02-07 11:55:28,175 p=5592 u=ansible n=ansible | TASK [copy nothing] **************************************************************************************************
+2021-02-07 11:55:28,472 p=5592 u=ansible n=ansible | fatal: [ansible107.ecm.com]: FAILED! => {"changed": false, "msg": "Source /tmp/nothing not found"}
+2021-02-07 11:55:28,472 p=5592 u=ansible n=ansible | ...ignoring
+2021-02-07 11:55:28,473 p=5592 u=ansible n=ansible | RUNNING HANDLER [restart_web] ****************************************************************************************
+2021-02-07 11:55:30,187 p=5592 u=ansible n=ansible | changed: [ansible107.ecm.com]
+2021-02-07 11:55:30,188 p=5592 u=ansible n=ansible | PLAY RECAP ***********************************************************************************************************
+2021-02-07 11:55:30,188 p=5592 u=ansible n=ansible | ansible107.ecm.com         : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2021-02-08 06:04:56,443 p=11757 u=ansible n=ansiblelint.__main__ | Listing 2 violation(s) that are fatal
+2021-02-08 06:05:08,915 p=11765 u=ansible n=ansible | playbook: handlers.yml

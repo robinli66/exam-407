@@ -2,7 +2,8 @@
 
 - name: copy new index.html
   hosts: file
-  force_handlers: true
+  force_handlers: True
+  ignore_errors: yes
 
   tasks:
     - name: install httpd
@@ -17,6 +18,7 @@
 
     - name: copy nothing
       copy:
+        remote_src: yes
         src: /tmp/nothing
         dest: nowhere
 
